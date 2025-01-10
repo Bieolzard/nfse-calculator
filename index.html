@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emissão de Nota Fiscal de Serviço</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Emissão de Nota Fiscal de Serviço (NFS-e)</h1>
+            <form id="nfse-form">
+                <div class="form-group">
+                    <label for="valorVenda">Valor da Venda (R$):</label>
+                    <input type="number" id="valorVenda" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="itensVendidos">Itens Vendidos:</label>
+                    <input type="text" id="itensVendidos" placeholder="Descrição dos itens" required>
+                </div>
+                <div class="form-group">
+                    <label for="irpf">Porcentagem do IRPF (%):</label>
+                    <input type="number" id="irpf" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="pis">Porcentagem do PIS (%):</label>
+                    <input type="number" id="pis" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="cofins">Porcentagem do COFINS (%):</label>
+                    <input type="number" id="cofins" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="inss">Porcentagem do INSS (%):</label>
+                    <input type="number" id="inss" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="issqn">Porcentagem do ISSQN (%):</label>
+                    <input type="number" id="issqn" step="0.01" required>
+                </div>
+                <button type="submit" class="submit-btn">Gerar Nota Fiscal</button>
+            </form>
+
+        <div class="overlay" id="overlay"></div> <!-- Fundo de overlay -->
+
+        <div id="notaFiscal" class="popup">
+            <button class="close-btn" id="closeBtn">×</button>
+        
+            <!-- Cabeçalho da Nota Fiscal -->
+            <div class="popup-header">
+                <p>Nota Fiscal de Serviço Eletrônica</p>
+                <p>Emitida em: <span id="dataEmissao"></span></p>
+            </div>
+        
+            <h2>Detalhes da Nota Fiscal</h2>
+            <p><strong>Valor da Venda:</strong> R$ <span id="outputValorVenda"></span></p>
+            <p><strong>Itens Vendidos:</strong> <span id="outputItensVendidos"></span></p>
+            <p><strong>Cálculos de Impostos:</strong></p>
+            <ul>
+                <li><span>IRPF:</span> <span>R$ <span id="outputIRPF"></span></span></li>
+                <li><span>PIS:</span> <span>R$ <span id="outputPIS"></span></span></li>
+                <li><span>COFINS:</span> <span>R$ <span id="outputCOFINS"></span></span></li>
+                <li><span>INSS:</span> <span>R$ <span id="outputINSS"></span></span></li>
+                <li><span>ISSQN:</span> <span>R$ <span id="outputISSQN"></span></span></li>
+            </ul>
+            <button class="submit-btn" id="printBtn">Imprimir Nota Fiscal</button>
+        
+            <!-- Rodapé da Nota Fiscal -->
+            <div class="popup-footer">
+                <p>Obrigado por utilizar nossos serviços</p>
+                <p>Esta nota fiscal é válida sem assinatura digital</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
