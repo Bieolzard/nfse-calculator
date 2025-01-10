@@ -65,17 +65,13 @@ function fecharPopup() {
 document.getElementById('printBtn').addEventListener('click', function () {
     const notaFiscal = document.getElementById('notaFiscal');
     const originalContent = document.body.innerHTML;
-
-    // Temporariamente substitui o conteúdo da página pelo popup da Nota Fiscal
+    
     document.body.innerHTML = notaFiscal.outerHTML;
 
-    // Imprime o conteúdo
     window.print();
 
-    // Restaura o conteúdo original da página
     document.body.innerHTML = originalContent;
 
-    // Restaura os eventos
     window.location.reload();
 });
 

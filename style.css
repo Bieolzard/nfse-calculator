@@ -1,4 +1,3 @@
-/* Ajustes gerais */
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f4f6f8;
@@ -6,14 +5,13 @@ body {
     padding: 20px;
 }
 
-/* Remove setinhas no Chrome, Edge e Safari */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
-/* Remove setinhas no Firefox */
+
 input[type="number"] {
     -moz-appearance: textfield;
 }
@@ -38,7 +36,6 @@ form {
     margin-bottom: 20px;
 }
 
-/* Ajustes de inputs */
 .form-group {
     margin-bottom: 20px;
     display: flex;
@@ -68,7 +65,6 @@ form {
     box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
 }
 
-/* Botão de envio */
 .submit-btn {
     width: 100%;
     padding: 15px;
@@ -87,7 +83,6 @@ form {
     transform: scale(1.02);
 }
 
-/* Tooltip para informações adicionais */
 .tooltip {
     position: relative;
     display: inline-block;
@@ -105,7 +100,7 @@ form {
     padding: 5px;
     position: absolute;
     z-index: 1;
-    bottom: 125%; /* Posição acima do ícone */
+    bottom: 125%; 
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
@@ -130,11 +125,10 @@ form {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     display: none;
-    font-family: 'Courier New', monospace; /* Fonte técnica */
-    color: #000; /* Texto preto */
+    font-family: 'Courier New', monospace;
+    color: #000;
 }
 
-/* Estiliza a nota fiscal para parecer mais real */
 .popup ul {
     list-style: none;
     padding: 0;
@@ -143,23 +137,22 @@ form {
 
 .popup ul li {
     display: flex;
-    justify-content: space-between; /* Alinha os elementos nas extremidades */
-    padding: 8px 0; /* Espaçamento entre os itens */
-    border-bottom: 1px dashed black; /* Linha de divisão para imitar tabelas */
+    justify-content: space-between; 
+    padding: 8px 0; 
+    border-bottom: 1px dashed black; 
     color: black;
 }
 
-
 .popup ul li span:first-child {
     text-align: left;
-    flex: 1; /* O tipo do imposto ocupa o espaço restante à esquerda */
+    flex: 1; 
 }
 
 .popup ul li span:last-child {
     text-align: right;
-    flex: 0; /* O valor do imposto fica à direita */
-    width: 100px; /* Define uma largura fixa para os valores */
-    font-weight: bold; /* Destaque nos valores */
+    flex: 0; 
+    width: 100px; 
+    font-weight: bold; 
 }
 
 .popup-header {
@@ -201,7 +194,6 @@ form {
     color: #666;
 }
 
-/* Estiliza a nota fiscal */
 .output {
     padding: 20px;
     border: 1px solid #ccc;
@@ -230,7 +222,7 @@ form {
     margin-top: 20px;
     width: 100%;
     padding: 10px;
-    background-color: #6b8e23; /* Verde para destacar */
+    background-color: #6b8e23; 
     color: #fff;
     border: none;
     border-radius: 18px;
@@ -248,7 +240,7 @@ form {
         display: none;
     }
 
-    /* Oculta o fundo de overlay */
+
     #overlay {
         display: none;
     }
